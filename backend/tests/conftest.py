@@ -45,6 +45,7 @@ def settings(database_url, tmp_path):
         whatsapp_verify_token="test-verify-token",
         gitlab_provider="mock",
         gitlab_webhook_secret="test-gitlab-secret",
+        gitlab_mock_state_path="",
         attachment_dir=str(tmp_path / "attachments"),
         attachment_max_bytes=1024,
         enable_outbox_worker=False,
