@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bug tracker</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bug tracker</h1>
+    <span id="health">checking</span>
+  </header>
+  <main>
+    <section>
+      <h2>API token</h2>
+      <label for="token">Bearer token</label>
+      <input id="token" autocomplete="off" placeholder="local-admin-token">
+      <button id="save-token" type="button">Save token</button>
+      <p id="token-status"></p>
+    </section>
+    <section>
+      <h2>Bug reports</h2>
+      <button id="refresh-bugs" type="button">Refresh</button>
+      <table>
+        <thead>
+          <tr><th>Product</th><th>Customer</th><th>Severity</th><th>Status</th><th>Reference</th></tr>
+        </thead>
+        <tbody id="bugs"></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Submit a bug</h2>
+      <form id="bug-form">
+        <div class="row">
+          <div>
+            <label for="product">Product slug</label>
+            <input id="product" value="try-on" required>
+          </div>
+          <div>
+            <label for="severity">Severity</label>
+            <select id="severity">
+              <option>low</option>
+              <option>medium</option>
+              <option selected>high</option>
+              <option>critical</option>
+            </select>
+          </div>
+        </div>
+        <label for="description">Description</label>
+        <textarea id="description" rows="3" required>Bracelet appears black</textarea>
+        <label for="screenshot">Screenshot</label>
+        <input id="screenshot" type="file" accept="image/png,image/jpeg,image/webp">
+        <button type="submit">Submit</button>
+        <p id="bug-status"></p>
+      </form>
+    </section>
+    <section>
+      <h2>Admin configuration</h2>
+      <form id="product-form">
+        <h3>Product</h3>
+        <div class="row">
+          <div>
+            <label for="product-name">Name</label>
+            <input id="product-name" value="Try-On">
+          </div>
+          <div>
+            <label for="product-slug">Slug</label>
+            <input id="product-slug" value="try-on-extra">
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="gitlab-project">GitLab project id</label>
+            <input id="gitlab-project" value="2001">
+          </div>
+          <div>
+            <label for="team-slug">Developer team slug</label>
+            <input id="team-slug" value="try-on">
+          </div>
+        </div>
+        <button type="submit">Save product</button>
+        <p id="product-status"></p>
+      </form>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
