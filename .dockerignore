@@ -1,0 +1,12 @@
+.git
+**/.git
+**/__pycache__
+**/.pytest_cache
+**/.mypy_cache
+**/.venv
+**/.env
+**/*.pyc
+**/*.egg-info
+**/attachments
+**/.ipynb_checkpoints
+*.ipynb

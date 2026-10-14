@@ -1,0 +1,19 @@
+{
+  "object_kind": "issue",
+  "event_type": "issue",
+  "user": {"id": 1, "name": "Developer", "username": "dev"},
+  "project": {"id": 1001, "path_with_namespace": "demo/try-on"},
+  "object_attributes": {
+    "id": 301,
+    "iid": 1,
+    "title": "[high] Try-On: Bracelet appears black",
+    "state": "closed",
+    "action": "close",
+    "url": "https://gitlab.mock/projects/1001/-/issues/1"
+  },
+  "labels": [{"title": "bug"}],
+  "changes": {
+    "state_id": {"previous": 1, "current": 2},
+    "state": {"previous": "opened", "current": "closed"}
+  }
+}
